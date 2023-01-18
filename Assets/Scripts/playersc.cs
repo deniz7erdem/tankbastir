@@ -24,9 +24,9 @@ public class playersc : MonoBehaviour
     {
         Canvas Canvas = GameObject.FindObjectOfType<Canvas>();
         Debug.Log(PlayerPrefs.GetInt("bolum"));
-        if(SceneManager.GetActiveScene().name=="sahne2"){
-            PlayerPrefs.SetInt("bolum", 1);
-        }
+        // if(SceneManager.GetActiveScene().name=="sahne2"){
+        //     PlayerPrefs.SetInt("bolum", 1);
+        // }
         InvokeRepeating("Spawn",1f,2f);
         audioSource = GetComponent<AudioSource>();
     }
@@ -35,7 +35,7 @@ public class playersc : MonoBehaviour
     void Update()
     {
         if(puan>=3&&SceneManager.GetActiveScene().name=="sahne1"){
-            StartCoroutine(SahneyiGec());
+            StartCoroutine(GoNextLevel());
         }
         if(Input.GetKey(KeyCode.DownArrow)){
             //transform.position += new Vector3(0.0f, -0.01f, 0.0f);
@@ -65,22 +65,28 @@ public class playersc : MonoBehaviour
     public void puanEkle(){
         this.puan++;
         if(puan>=3&&SceneManager.GetActiveScene().name=="sahne2"){
-            SceneManager.LoadSceneAsync("son");
+            StartCoroutine(GoNextLevel());
         }
         Debug.Log(this.puan);
     }
 
 
 
-IEnumerator SahneyiGec(){
-
-    AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("sahne2");
-
-    if (!asyncLoad.isDone)
-        {
+IEnumerator GoNextLevel(){
+    if(SceneManager.GetActiveScene().name=="sahne2"){
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("son");
+        if (!asyncLoad.isDone){
         yield return null;
-
         }
+    }else{
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("sahne2");
+        if (!asyncLoad.isDone){
+        yield return null;
+        }
+    }
+ 
 
+   
     }
 }
+
