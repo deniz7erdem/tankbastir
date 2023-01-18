@@ -20,10 +20,10 @@ https://simmer.io/@deny/tankbastirfinal
 ## Görev Paylaşımı
 
 Deniz Erdem
-- Düşman tank scriptleri ve lazer scripti
+- Düşman tank scripi ve lazer scripti
 
 Onur Yazkili
-- Player scripti, ana sayfa ve müzik
+- Player scripti, ana sayfa ve sesler
 
 Buse Çınar
 - Duraklatma menüsünde oyun kayıt ve animasyonlar
