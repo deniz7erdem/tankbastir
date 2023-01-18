@@ -3,7 +3,7 @@
 Bursa Teknik Üniversitesi Oyun Programlama dersi final projesi
 
 ## Deneyimlemek için
-https://simmer.io/@deny/tankbastir
+https://simmer.io/@deny/tankbastirfinal
 
 ## Kullanılan görsel ve sesler
 
