@@ -16,3 +16,14 @@ https://simmer.io/@deny/tankbastirfinal
 - Sahne 2 arkaplan - https://opengameart.org/node/14143
 - Oyun şarkısı - https://opengameart.org/content/space-boss-battle-theme
 - Ateş sesi - https://opengameart.org/content/laser-fire
+
+## Görev Paylaşımı
+
+Deniz Erdem
+- Düşman tank scriptleri ve lazer scripti
+
+Onur Yazkili
+- Player scripti, ana sayfa ve müzik
+
+Buse Çınar
+- Duraklatma menüsünde oyun kayıt ve animasyonlar
